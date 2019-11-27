@@ -31,6 +31,7 @@
 			sun: "Some showers with fine pathches"
 		}
 
+		// Funtion to grab elements by ID
 		function grabElements () {
 			var heading = document.getElementById("pageHeading");
 			var paragraph = document.getElementById("statement");
@@ -39,6 +40,7 @@
 			console.log(weatherForecast.thur);
 			console.dir(span);
 
+			// Changing the text to the object value thur which is thunder
 			span.innerText = weatherForecast.thur;
 
 		}
