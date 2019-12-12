@@ -10,6 +10,11 @@
 			font-family: 'Source Sans Pro', sans-serif;
 		}
 
+		button {
+			padding: 1.2em;
+			margin-right: 3em;
+		}
+
 		.weather-icon {
 			display: none;
 		}
@@ -60,35 +65,9 @@
 			sun: "Some showers with fine pathches"
 		}
 
-		// Funtion to grab elements by ID
-		// function grabElements () {
-		// 	var heading = document.getElementById("pageHeading");
-		// 	var paragraph = document.getElementById("statement");
-		// 	var span = document.getElementById("weather");
-		//
-		// 	console.log(weatherForecast.thur);
-		// 	console.dir(span);
-		//
-		// 	// Changing the text to the object value thur which is thunder
-		// 	span.innerText = weatherForecast.thur;
-		//
-		// }
-
 		var weatherArray = ["sunny", "Cloudy", "Rainy", "Thunder", "Windy", "Fine", "Some Showers with fine pathches"]
 
-		// function workWithTheArray () {
-		// 	// Go to the DOM and grab the span element
-		// 	var span = document.getElementById("weather");
-		// 	// Refrence the sixth item in the array (starts at 0)
-		// 	var arrayWeatherItem = weatherArray[5];
-		// 	span.innerText = arrayWeatherItem;
-		// }
-		// // workWithTheArray();
-		//
-		// window.onclick = function () {
-		// 	// Go do stuff
-		// 	workWithTheArray();
-		// }
+
 
 		function setUpButtonEvents () {
 			var span = document.getElementById("weather");
@@ -107,6 +86,7 @@
 
 			mon.onclick = function () {
 				span.innerText = weatherForecast.mon;
+				console.log("sdas");
 			}
 
 			tue.onclick = function () {

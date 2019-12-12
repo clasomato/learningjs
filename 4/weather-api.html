@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<style>
+		/* CSS Here */
+	</style>
+</head>
+<body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<h1>The temperature today in Wellington is <span id="temp"></span> degrees celsius.</h1>
+
+	<script>
+		 // 3c34556f073f3dd334734cc4e296c17e
+
+		 $.ajax({
+			 url: "https://api.openweathermap.org/data/2.5/weather?q=Wellington,nz&units=metric&APPID=3c34556f073f3dd334734cc4e296c17e",
+			 type: 'GET',
+			 datatype: "jsonp",
+			 success: function(data) {
+				 console.log(data);
+
+				 $("#temp").text(data.main.temp);
+			 }
+		 });
+
+	</script>
+</body>
+</html>
